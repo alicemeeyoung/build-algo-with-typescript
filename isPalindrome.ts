@@ -19,6 +19,7 @@ const isAnyPermutationPalindrome = (str: string): boolean => {
 	return permutations(str).some(isPalindrome);
 };
 
+//LINEAR, n (number of characters in string)
 const isAnyPermutationPalindrome2 = (str: string): boolean => {
 	//create a variable unmatched by instantiating a new Set that contains strings
 	//new Set = array with no duplicates
