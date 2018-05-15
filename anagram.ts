@@ -31,6 +31,7 @@ export function areAnagrams2(s1: string, s2: string): boolean {
 //use hash map counts characters between two string
 //big O: n; n = number of characters in the string
 export function areAnagrams3(s1: string, s2: string): boolean {
+	//new Map use less memory
 	//Map with string keys and number values
 	const charCount = new Map<string, number>();
 	//iterate through charac in s1
