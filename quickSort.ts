@@ -11,9 +11,11 @@ const partition = (array: number[], start: number, before: number): void => {
 	const length = before - start;
 	if (length <= 1) return;
 
-	const pivotIndex = start + Math.floor(Math.random() * length); //pick a pivot
+	//pick a pivot and move to the head of array
+	const pivotIndex = start + Math.floor(Math.random() * length);
 	[array[start], array[pivotIndex]] = [array[pivotIndex], array[start]];
 
+	//now first el is pivot
 	const pivot = array[start];
 	let pivotRank = start;
 
@@ -40,6 +42,9 @@ const partition = (array: number[], start: number, before: number): void => {
 	//   pivot
 	//   itmes greater than pivot
 	// ]
+
+	//partition el < pivot
 	partition(array, start, pivotRank);
+	//partition el > pivot
 	partition(array, pivotRank + 1, before);
 };
