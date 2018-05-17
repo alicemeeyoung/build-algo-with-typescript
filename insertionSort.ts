@@ -7,9 +7,9 @@ const insertionSort = (array: number[]): number[] => {
 	for (let i = 1; i < array.length; i++) {
 		const current = array[i];
 		console.log({ section: array.slice(0, i), current });
-		let j = i - 1; //j = previous
+		let j = i - 1; //j = number we are comparing against
 		while (j >= 0 && array[j] > current) {
-			array[j + 1] = array[j];
+			array[j + 1] = array[j]; //slide to the right
 			j--;
 		}
 		array[j + 1] = current;
