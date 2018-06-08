@@ -1,6 +1,7 @@
 // node {value, next} -> node {value, next} -> undefined
 
 //define our linked list node here
+//interface: structure that enforces specific prop on an obj
 interface LinkedListNode<T> {
     value: T;
     next?: LinkedListNode<T>;
