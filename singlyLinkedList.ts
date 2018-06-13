@@ -46,7 +46,7 @@ class LinkedList<T> {
         let current = this.head;
         //while there is a head
         while (current) {
-            //want to yield its valiue
+            //want to yield its value
             yield current.value;
             //update our current to the next value
             current = current.next;
