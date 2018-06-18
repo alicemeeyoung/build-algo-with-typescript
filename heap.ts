@@ -38,7 +38,7 @@
  * }
  */
 
-type CompareFn = <T>(a: T, b: T) => number;
+export type CompareFn = <T>(a: T, b: T) => number;
 
 /**
  * implement heap data structure
@@ -46,7 +46,7 @@ type CompareFn = <T>(a: T, b: T) => number;
  * default compre behavior gives min heap
  */
 
-class Heap<T> {
+export class Heap<T> {
     private data: T[] = [];
     //accepts a compare function
     constructor(private compareFn: CompareFn<T>) {}
